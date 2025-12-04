@@ -14,7 +14,23 @@ def inkomsten_totaal(inkomsten, btw=0):
     else:
         return totaal
     
-    def combinatie(invoer_lijst_2):
-        korte_lijst = laag_en_hoog(invoet_lijst_2)
-        uitvoer = mijn_functie_2(korte_lijst[0], korte_lijst[1])
-        return uitvoer
+def laag_en_hoog(mijn_lijst):
+    uitvoer = []
+    laagste = min(mijn_lijst)
+    hoogste = max(mijn_lijst)
+    uitvoer.append(laagste)
+    uitvoer.append(hoogste) 
+    return uitvoer   
+    
+def gemiddelde(mijn_lijst):
+    aantal = len(mijn_lijst)
+    totaal = 0
+    for element in mijn_lijst:
+        totaal += element
+        gemiddelde = totaal / aantal
+        return f"De gemiddelde inkomsten deze week zijn {gemiddelde} euro."
+    
+def meervoudig(invoer_lijst):
+    tijdelijk = laag_en_hoog(invoer_lijst)    
+    uitvoer = [tijdelijk[0],tijdelijk[1]]
+    return uitvoer
